@@ -1,18 +1,20 @@
+public abstract class Empleados extends Main1{
+	String nombre;
+	int numeroIdentifi;
+	int codigoArea;
+	double sueldo, año, bono;
 
-public class Empleados extends Empresa {
-
-	public String nombre;
-	public int ident, CodArea;
-	public int sueldo = 0;
 	
-	public Empleados(String nombre, int ident, int CodArea, int sueldo) {
-		this.nombre= nombre;
-		this.ident=ident;
-		this.CodArea=CodArea;
-		this.sueldo=sueldo;
+	public double getSueldo() {
+		return sueldo;
 	}
-	
-	
+
+
+	public void setSueldo(double sueldo) {
+		this.sueldo = sueldo;
+	}
+
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -23,46 +25,61 @@ public class Empleados extends Empresa {
 	}
 
 
-	public int getIdent() {
-		return ident;
+
+	public int getNumeroIdentifi() {
+		return numeroIdentifi;
 	}
 
 
-	public void setIdent(int ident) {
-		this.ident = ident;
+
+	public void setNumeroIdentifi(int numeroIdentifi) {
+		this.numeroIdentifi = numeroIdentifi;
 	}
 
 
-	public int getCodArea() {
-		return CodArea;
+
+	public int getCodigoArea() {
+		return codigoArea;
 	}
 
 
-	public void setCodArea(int codArea) {
-		CodArea = codArea;
+
+	public void setCodigoArea(int codigoArea) {
+		this.codigoArea = codigoArea;
 	}
 
 
-	public int getSueldo() {
-		return sueldo;
+
+
+	public double getAño() {
+		return año;
 	}
 
 
-	public void setSueldo(int sueldo) {
-		this.sueldo = sueldo;
+
+	public void setAño(double año) {
+		this.año = año;
 	}
+
+
+
+	public double getBono() {
+		return bono;
+	}
+
+
+
+	public void setBono(double bono) {
+		this.bono = bono;
+	}
+
+
 	
-	@Override
-	public String toString() {
-		return "Nombre: "+this.nombre+ "Identidad: "+this.ident+"Cod.Area: "+this.CodArea+"Sueldo: "+this.sueldo;
-	}
-
-
-	public static void add(Empresa empleado) {
-		
-		
-	}
-
+	public Empleados(String nombre, int numeroIdentifi, int codigoArea, int sueldo2) {
 	
+	}
+
+
+	public abstract void Sueldo(double sueldo);
 
 }

@@ -1,47 +1,41 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import javax.swing.text.html.InlineView;
+import java.util.Scanner;
 
 public class Main1 {
-	private static ArrayList<Empresa> cargos = new ArrayList<>();
-	static Scanner sc = new Scanner(System.in);
-	
+
+	public static double  diaDePago(ArrayList<Empleados>empleados) {
+		double sueldo=0;
+		for(int i = 0; i<empleados.size();i++) {
+			Empleados empleado1 = empleados.get(i);
+			sueldo +=empleado1.getSueldo();
+		}
+		return sueldo;
+	}
+
 	public static void main(String[] args) {
-		
-		int opcion = 0;
-		do {
-			System.out.println("1.-Contratar empleado");
-			System.out.println("2.-Dia de pago");
-			System.out.println("Ingrese Opcion: ");
-			opcion= sc.nextInt();
-			
-			switch (opcion) {
-			case 1:
-				System.out.println("Nombre: ");
-				
-				break;
-				
-			case 2:
-				
-				break;
+		double sueldo, año, bono;
+		ArrayList<Empleados>empleados = new ArrayList<>();
 
-			default:
-				System.out.println("Opcion no valida");
-				break;
-			}
-		} while (opcion != 2);
-	
+		System.out.println("SALARIO :");
+		Scanner entrada = new Scanner(System.in);
+		sueldo = entrada.nextInt();
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("AÑOS DE SERVICIO :");
+		Scanner entrada1 = new Scanner(System.in);
+		año = entrada.nextInt();
+		Scanner in1 = new Scanner(System.in);
+		
+		System.out.println("BONO EXTRA:");
+		Scanner entrada2 = new Scanner(System.in);
+		bono = entrada.nextInt();
+		Scanner in2 = new Scanner(System.in);
+		
+		
+		
+		System.out.println(diaDePago(empleados));
 		
 	}
 	
-	
-	public static void agregar(String nombre, int indent, int CodArea, Empleados empleado1) {
-		
-	}
-	
-	
-	
-	
-
 }
